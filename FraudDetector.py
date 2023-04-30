@@ -62,8 +62,11 @@ class FraudDetector:
         y_pred = self._svm.predict(X_test)
 
         # Calculating the accuracy
-        accuracy = np.mean(y_pred == y_test)
-        print("Accuracy:", accuracy)
+        self._accuracy = np.mean(y_pred == y_test)
+        print("Accuracy:", self._accuracy)
+
+    def getAccuracy(self):
+        return self._accuracy
 
     def predictFraud(self, features: list):
         if len(features) != 4:

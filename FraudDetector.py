@@ -13,19 +13,19 @@ from qiskit_ibm_provider import IBMProvider
 class FraudDetector:
     _svm = QSVC(quantum_kernel=qkernel)
 
-    def __init__(self, csv_path: str, used_columns: list, target_col: str):
-        if len(used_columns) != 4:
+    def __init__(self, csv_path: str, training_cols: list, target_cols: str):
+        if len(training_cols) != 4:
             raise ValueError('The columns have to be exactly four')
-        used_columns.append(target_col)
+        training_cols.append(target_cols)
 
         # Load the csv file and specifying the columns
-        bank_df = pd.read_csv(csv_path, usecols=used_columns)
+        bank_df = pd.read_csv(csv_path, usecols=training_cols)
 
-        result_0 = bank_df.loc[bank_df[target_col] == 0]
+        result_0 = bank_df.loc[bank_df[target_cols] == 0]
         used_data0 = result_0.loc[:20]
 
         # Getting 180 fraud records
-        result_1 = bank_df.loc[bank_df[target_col] == 1]
+        result_1 = bank_df.loc[bank_df[target_cols] == 1]
         result_1 = result_1.reset_index()
         used_data1 = result_1.loc[:180]
 
@@ -68,13 +68,13 @@ class FraudDetector:
     def getAccuracy(self):
         return self._accuracy
 
-    def predictFraud(self, features: list):
+    def predictFraudBool(self, features: list):
         if len(features) != 4:
             raise ValueError('The columns have to be exactly four')
-        return self.predict(features)
+        return self._svm.predict(features)
 
-    def getPrediction(self, features: list):
-        if self.predictFraud(features=features):
+    def predictFraudStr(self, features: list):
+        if self.predictFraudBool(features):
             return "Fraud"
         return "Not Fraud"
 

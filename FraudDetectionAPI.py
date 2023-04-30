@@ -18,7 +18,7 @@ def upload_csv_and_join():
     return jsonify(response)
 
 
-@app.route('/check_strings', methods=['POST'])
+@app.route('/predict_features', methods=['POST'])
 def check_strings():
     # Get strings from request
     features = request.json['features']
@@ -29,7 +29,6 @@ def check_strings():
         'prediction': response
     }
     return jsonify(response)
-
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,124 @@
+
+body {
+  background-image: url(./assets/nicolas-arnold-e_xLO2vmiQI-unsplash.png) ;
+  background-position: center;
+
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  border-radius: 10px;
+  width: 100%;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-family: 'Pathway Extreme', sans-serif;
+  color: white;
+}
+
+.result-red{
+color: red;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: 'Pathway Extreme', sans-serif;
+  color: white;
+}
+
+
+
+input {
+  width: 25rem;
+  height: 3.3rem;
+  padding: 0.5rem;
+  font-family: 'Pathway Extreme', sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+background: rgba(255, 255, 255, 0.18);
+border-radius: 7px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.2px);
+-webkit-backdrop-filter: blur(2.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.select-input{
+  width: 25rem;
+  height: 3.3rem;
+  padding: 0.5rem;
+  font-family: 'Pathway Extreme', sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+background: rgba(255, 255, 255, 0.18);
+border-radius: 7px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.2px);
+-webkit-backdrop-filter: blur(2.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button{
+  font-family: 'Pathway Extreme', sans-serif;
+}
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+p {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Pathway Extreme', sans-serif;
+  color: #4caf50;
+}
+.logo {
+  width: 30rem;
+
+  position: absolute;
+  top: 0.5rem;
+  left: -5rem;
+}
+.container {
+  padding: 5px 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 35rem;
+  min-height: 45rem;
+  transform: translateX(-50%) translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+

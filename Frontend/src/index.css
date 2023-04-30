@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@1,500&display=swap');
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+html{
+  font-size: 10px;
+}
